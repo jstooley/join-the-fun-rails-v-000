@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140212205318) do
+ActiveRecord::Schema.define(version: 20171222162945) do
+
+  create_table "passangers_taxis", id: false, force: :cascade do |t|
+    t.integer "taxi_id",      null: false
+    t.integer "passanger_id", null: false
+  end
 
   create_table "passengers", force: :cascade do |t|
     t.datetime "created_at", null: false
